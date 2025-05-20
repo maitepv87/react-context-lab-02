@@ -7,6 +7,10 @@ function App() {
 
   useEffect(() => {
     fetchBooks();
+
+    return () => {
+      console.log("cleanup");
+    };
   }, []);
 
   return (
