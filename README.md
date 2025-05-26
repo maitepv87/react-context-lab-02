@@ -1,35 +1,42 @@
-# React-Context-Lab-02  
+# React-Context-Lab-02
 
-## Description  
-React-Context-Lab-02 is a testing lab built with **React**, **Context API**, and **Axios**, designed to explore efficient state management and CRUD operations with a **mock API**. This project allows hands-on experimentation with:  
+## Description
 
-- Implementing global state management using **Context API**  
-- Fetching, creating, updating, and deleting book records with **Axios**  
-- Managing API calls using **custom hooks (`useBooksContext`)**  
-- Simulating data persistence using **JSON Server**  
-- Structuring components with modular and reusable logic  
+React-Context-Lab-02 is a testing lab built with **React**, **Context API**, and **Axios**, designed to explore efficient state management and CRUD operations with a **mock API**. This project allows hands-on experimentation with:
 
-It serves as a structured sandbox for understanding **state management using Context API** with **CRUD operations via an external API**.  
+- Implementing global state management using **Context API**
+- Fetching, creating, updating, and deleting book records with **Axios**
+- Managing API calls using **custom hooks (`useBooksContext`)**
+- Simulating data persistence using **JSON Server**
+- Structuring components with modular and reusable logic
 
-## Technologies Used  
-- **React** – Component-based UI development  
-- **Context API** – Global state management without Redux  
-- **Axios** – Promise-based HTTP client for API requests  
-- **JSON Server** – Mock API for simulating backend interactions  
-- **PropTypes** – Runtime validation for React components  
-- **Vite** – Fast build tool for modern development  
+It serves as a structured sandbox for understanding **state management using Context API** with **CRUD operations via an external API**.
 
-## Getting Started  
+## Technologies Used
 
-### Installation & Setup  
-To run the project locally, follow these steps:  
+- **React** – Component-based UI development
+- **Context API** – Global state management without Redux
+- **Axios** – Promise-based HTTP client for API requests
+- **JSON Server** – Mock API for simulating backend interactions
+- **PropTypes** – Runtime validation for React components
+- **Vite** – Fast build tool for modern development
 
-#### Clone the repository  
+## Getting Started
+
+### Installation & Setup
+
+To run the project locally, follow these steps:
+
+#### Clone the repository
+
 ```bash
 git clone https://github.com/maitepv87/react-context-lab-02.git
 cd react-context-lab-02
 npm install
 npm run dev
+
+Mock API Setup
+This project uses JSON Server to simulate a REST API for managing book records. To set up the local API, follow these steps:
 
 Install JSON Server
 npm install -g json-server
@@ -38,17 +45,26 @@ Start the server
 json-server -p 3001 --watch db.json
 
 Available API Endpoints
+
+Get all books
 GET http://localhost:3001/books
+
+Create a book
 POST http://localhost:3001/books
 Content-Type: application/json
 
 {
     "title": "Harry Potter"
 }
+
+Update a book
 PUT http://localhost:3001/books/1
 Content-Type: application/json
 
 {
     "title": "Dark Tower"
 }
+
+Delete a book
 DELETE http://localhost:3001/books/1
+```
